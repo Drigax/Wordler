@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 2.8.11)
+cmake_minimum_required (VERSION 3.13.0)
 project (Wordler)
 
 add_subdirectory (Solver)
