@@ -1,8 +1,15 @@
-add_executable(WordleSolver WordleSolver.cpp)
-target_include_directories (WordleSolver PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+set(SOURCES
+    "WordleSolver.cpp"
+    "Include/WordleRule.h"
+    )
 
+add_executable(WordleSolver ${SOURCES})
+
+target_include_directories(WordleSolver
+    PUBLIC "Include")
 
 set_property(TARGET WordleSolver PROPERTY CXX_STANDARD 20)
+
 set_property(TARGET WordleSolver PROPERTY VS_DEBUGGER_WORKING_DIRECTORY $<TARGET_FILE_DIR:WordleSolver>)
 set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT WordleSolver)
 
